@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Payment Calculator">
+    <meta name="author" content="Jared">
+    <title>Week 6 PayCalculator</title>
+</head>
+<body>
+    
+    <script>
+        var taxPercent=Number(prompt("What is the tax rate in percent?"))
+        var taxRate=taxPercent/100
+        var hourlyWage=Number(prompt("What is your hourly wage?"))
+        var hoursWorked=Number(prompt("How many hours did you work in the last two weeks?"))
+        var grossPay=hourlyWage*hoursWorked
+        var taxesTaxen=grossPay*taxRate
+        var netPay=grossPay-taxesTaxen
+        alert(`Gross pay of $${grossPay.toFixed(2)}.\nTaxes $${taxesTaxen.toFixed(2)}.\nNet pay $ ${netPay.toFixed(2)}`)
+        console.log(`Gross pay: $${grossPay}\n Uncle Sam's Share: $${taxesTaxen}\n Net pay: $${netPay}`)
+    </script>
+</body>
+</html>
